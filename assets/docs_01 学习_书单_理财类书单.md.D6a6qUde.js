@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./chunks/framework.CQ12TVIp.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/01 学习/书单/理财类书单.md","filePath":"docs/01 学习/书单/理财类书单.md"}'),o={name:"docs/01 学习/书单/理财类书单.md"};function s(c,r,_,n,d,p){return a(),t("div")}const f=e(o,[["render",s]]);export{m as __pageData,f as default};
