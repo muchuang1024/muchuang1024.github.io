@@ -6,6 +6,9 @@ hero:
   name: '在线文档网站'
   text: ''
   tagline: 个人知识库
+  image:
+    src: /logo.png
+    alt: VitePress
   actions:
     - theme: brand
       text: 文档介绍
