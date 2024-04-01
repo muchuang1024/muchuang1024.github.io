@@ -13,6 +13,7 @@ nav.forEach(item => {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  head: [['link', { rel: 'icon', href: '/favicon.png' }]],
   title: '木川的在线文档网站',
   description: '个人知识库',
   srcDir: '.',
