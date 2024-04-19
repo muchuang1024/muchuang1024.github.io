@@ -104,7 +104,7 @@ import{_ as s,c as a,o as n,a4 as p}from"./chunks/framework.4aTu-Nia.js";const g
 <span class="line"><span>  workflow_dispatch:</span></span>
 <span class="line"><span>  push:</span></span>
 <span class="line"><span>    branches: </span></span>
-<span class="line"><span>      - master</span></span>
+<span class="line"><span>      - main</span></span>
 <span class="line"><span></span></span>
 <span class="line"><span>jobs:</span></span>
 <span class="line"><span>  update:</span></span>
