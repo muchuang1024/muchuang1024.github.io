@@ -4,7 +4,8 @@ export default [
     items: [
       { text: '书单', link: 'docs/01 学习/书单/写作类书单.md' },
       { text: '提示词', link: 'docs/01 学习/提示词/自媒体文章拆解.md' },
-      { text: '课程', link: 'docs/01 学习/课程/Golang/分销手册.md' }
+      { text: '专栏', link: 'docs/01 学习/专栏/Golang/分销手册.md' },
+      { text: '付费', link: 'docs/01 学习/付费/小册.md' }
     ]
   },
   {
@@ -21,6 +22,6 @@ export default [
   },
   {
     text: '付费课程',
-    link: 'docs/00 素材/付费产品.md'
+    link: 'docs/01 学习/付费/小册.md'
   }
 ]
