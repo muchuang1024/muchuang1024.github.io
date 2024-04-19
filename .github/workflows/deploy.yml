@@ -16,8 +16,10 @@ jobs:
           submodules: true
           token: ${{ secrets.PRIVATE_TOKEN_GITHUB }}
 
-      - name: Install npm
-        run: npm install -g npm
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
