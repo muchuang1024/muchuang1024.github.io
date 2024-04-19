@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: '在线文档网站'
-  text: ''
-  tagline: 个人知识库
+  name: '木川'
+  text: '关注AI和编程技术'
+  tagline: 每年更新 100 篇文章
   image:
     src: /logo.png
     alt: VitePress
@@ -24,7 +24,7 @@ features:
   - icon: 🌟
     title: AI
     details: 人工智能（AI）让计算机模拟人类智能，从语音识别到自动驾驶，它的应用正变得越来越广泛，并有望改变我们的生活方式。
-  - icon: 🌈
+  - icon: 🚀
     title: 副业
     details: 副业是除了主要工作之外的额外职业。它可以提供额外的收入，拓宽职业经验，甚至可能发展成主要职业。
 ---
