@@ -6,10 +6,12 @@
     "deploy": "gh-pages -d .vitepress/dist"
   },
   "dependencies": {
+    "colorette": "^2.0.20",
+    "gh-pages": "^6.1.1",
     "vitepress": "^1.0.1",
-    "vite-plugin-vitepress-auto-sidebar": "^1.6.3",
-    "vite-plugin-vitepress-auto-nav": "^2.2.2",
-    "vitepress-auto-navigation": "^0.0.4",
-    "gh-pages": "^6.1.1"
+    "vitepress-auto-navigation": "^0.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7"
   }
 }
