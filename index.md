@@ -15,7 +15,7 @@ hero:
       link: /docs/README
     - theme: alt
       text: 付费产品
-      link: /docs/00 素材/付费产品
+      link: docs/01 学习/付费/小册.md
 
 features:
   - icon: 🛠️

@@ -21,7 +21,7 @@ export default [
     ]
   },
   {
-    text: '付费课程',
+    text: '付费产品',
     link: 'docs/01 学习/付费/小册.md'
   }
 ]
