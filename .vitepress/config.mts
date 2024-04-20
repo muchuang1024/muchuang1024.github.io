@@ -18,7 +18,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: nav,
     sidebar: sidebar,
-    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/muchuang1024' }],
     footer: {
       message: '木川工作室 （微信：mcmc2024)',
       copyright: 'Copyright © 2024-present 木川工作室'
