@@ -1,0 +1,1 @@
+import{_ as e,c as t,o}from"./chunks/framework.4aTu-Nia.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/problems/链表理论基础.md","filePath":"docs/problems/链表理论基础.md"}'),s={name:"docs/problems/链表理论基础.md"};function r(a,c,_,n,p,d){return o(),t("div")}const l=e(s,[["render",r]]);export{i as __pageData,l as default};
