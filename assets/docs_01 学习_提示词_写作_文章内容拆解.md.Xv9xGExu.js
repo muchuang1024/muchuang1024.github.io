@@ -1,4 +1,4 @@
-import{_ as s,c as n,o as a,a4 as p}from"./chunks/framework.4aTu-Nia.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/01 学习/提示词/自媒体文章拆解.md","filePath":"docs/01 学习/提示词/自媒体文章拆解.md"}'),l={name:"docs/01 学习/提示词/自媒体文章拆解.md"},e=p(`<p>#写作</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>### 第一遍：整体解读</span></span>
+import{_ as s,c as n,o as a,a4 as p}from"./chunks/framework.4aTu-Nia.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/01 学习/提示词/写作/文章内容拆解.md","filePath":"docs/01 学习/提示词/写作/文章内容拆解.md"}'),l={name:"docs/01 学习/提示词/写作/文章内容拆解.md"},e=p(`<p>#写作</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>### 第一遍：整体解读</span></span>
 <span class="line"><span></span></span>
 <span class="line"><span>1. **描述整体的感受**</span></span>
 <span class="line"><span>    </span></span>
@@ -36,4 +36,4 @@ import{_ as s,c as n,o as a,a4 as p}from"./chunks/framework.4aTu-Nia.js";const u
 <span class="line"><span>    - 识别文章中的故事元素，特别是那些能够有效传达信息或情感的故事。</span></span>
 <span class="line"><span>5. **收集金句**</span></span>
 <span class="line"><span>    </span></span>
-<span class="line"><span>    - 摘录任何强有力的、引人入胜的或富有哲理的句子，这些可以作为您写作中的亮点。</span></span></code></pre></div>`,2),c=[e];function i(t,_,o,d,r,h){return a(),n("div",null,c)}const f=s(l,[["render",i]]);export{u as __pageData,f as default};
+<span class="line"><span>    - 摘录任何强有力的、引人入胜的或富有哲理的句子，这些可以作为您写作中的亮点。</span></span></code></pre></div>`,2),c=[e];function i(t,o,_,d,r,h){return a(),n("div",null,c)}const f=s(l,[["render",i]]);export{u as __pageData,f as default};
