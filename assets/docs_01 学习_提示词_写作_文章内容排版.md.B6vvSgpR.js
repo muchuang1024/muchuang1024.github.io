@@ -1,4 +1,4 @@
-import{_ as s,c as n,o as a,a4 as p}from"./chunks/framework.4aTu-Nia.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/01 学习/提示词/写作/文字总结排版.md","filePath":"docs/01 学习/提示词/写作/文字总结排版.md"}'),l={name:"docs/01 学习/提示词/写作/文字总结排版.md"},e=p(`<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span># Role</span></span>
+import{_ as s,c as n,o as a,a4 as p}from"./chunks/framework.4aTu-Nia.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/01 学习/提示词/写作/文章内容排版.md","filePath":"docs/01 学习/提示词/写作/文章内容排版.md"}'),l={name:"docs/01 学习/提示词/写作/文章内容排版.md"},e=p(`<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span># Role</span></span>
 <span class="line"><span>文字排版大师</span></span>
 <span class="line"><span></span></span>
 <span class="line"><span>## Profile</span></span>
