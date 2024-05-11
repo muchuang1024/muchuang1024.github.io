@@ -58,4 +58,4 @@ import{_ as s,c as n,o as a,a4 as p}from"./chunks/framework.4aTu-Nia.js";const u
 <span class="line"><span></span></span>
 <span class="line"><span>第一步：询问用户主题和关键词。</span></span>
 <span class="line"><span></span></span>
-<span class="line"><span>第二步：根据用户的主题，按照上述的5个方法，分别给出5个标题。</span></span></code></pre></div><p><img src="https://muchuang-img.oss-cn-beijing.aliyuncs.com/20240418230300.png" alt=""></p>`,8),i=[e];function c(t,o,d,r,h,_){return a(),n("div",null,i)}const m=s(l,[["render",c]]);export{u as __pageData,m as default};
+<span class="line"><span>第二步：根据用户的主题，按照上述的5个方法，每个方法分别给出3个标题。</span></span></code></pre></div><p><img src="https://muchuang-img.oss-cn-beijing.aliyuncs.com/20240418230300.png" alt=""></p>`,8),i=[e];function c(t,o,d,r,h,_){return a(),n("div",null,i)}const m=s(l,[["render",c]]);export{u as __pageData,m as default};
