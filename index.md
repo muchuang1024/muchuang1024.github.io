@@ -14,8 +14,8 @@ hero:
       text: 文档介绍
       link: /
     - theme: alt
-      text: 付费产品
-      link: docs/01 学习/付费/小册.md
+      text: 我的产品体系
+      link: docs/03 产品/木川/小册.md
 
 features:
   - icon: 🛠️
