@@ -1,5 +1,0 @@
-import{_ as s,c as t,o as a,m as e}from"./chunks/framework.4aTu-Nia.js";const C=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/03 博客/效率提升/效率提升/Clash.md","filePath":"docs/03 博客/效率提升/效率提升/Clash.md"}'),n={name:"docs/03 博客/效率提升/效率提升/Clash.md"},o=e("p",null,"解决打开clashx之后，mac系统配置的hosts就会失效",-1),c=e("p",null,[e("a",{href:"https://github.com/Dreamacro/clash/issues/423",target:"_blank",rel:"noreferrer"},"https://github.com/Dreamacro/clash/issues/423")],-1),l=e("p",null,"打开配置文件，编辑config.yaml",-1),r=e("p",null,[e("img",{src:"https://fastly.jsdelivr.net/gh/caijinlin/imgcdn/wecom-temp-4a786b6af2b42dda9bc72eda04acd0b3.png",alt:""})],-1),d=e("p",null,"dns: enable: true ipv6: false nameserver:",-1),i=e("pre",null,[e("code",null,`    - 1.2.4.8
-            - 114.114.114.114
-            - 223.5.5.5
-                    - tls://dns.rubyfish.cn:853
-`)],-1),h=e("p",null,"将enable改成false",-1),_=[o,c,l,r,d,i,h];function p(m,u,f,b,g,v){return a(),t("div",null,_)}const $=s(n,[["render",p]]);export{C as __pageData,$ as default};

@@ -1,0 +1,15 @@
+import{_ as a,c as n,o as s,a4 as p}from"./chunks/framework.4aTu-Nia.js";const m=JSON.parse('{"title":"一、基本概念","description":"","frontmatter":{},"headers":[],"relativePath":"docs/02 技术/Golang/Go 源码/Go 源码 | Go WaitGroup 实现原理.md","filePath":"docs/02 技术/Golang/Go 源码/Go 源码 | Go WaitGroup 实现原理.md"}'),e={name:"docs/02 技术/Golang/Go 源码/Go 源码 | Go WaitGroup 实现原理.md"},t=p(`<h1 id="一、基本概念" tabindex="-1">一、基本概念 <a class="header-anchor" href="#一、基本概念" aria-label="Permalink to &quot;一、基本概念&quot;">​</a></h1><p>Go 标准库提供了 WaitGroup 原语, 可以用它来等待一批 Goroutine 结束</p><h1 id="二、底层数据结构" tabindex="-1">二、底层数据结构 <a class="header-anchor" href="#二、底层数据结构" aria-label="Permalink to &quot;二、底层数据结构&quot;">​</a></h1><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>type WaitGroup struct {</span></span>
+<span class="line"><span>    noCopy noCopy</span></span>
+<span class="line"><span>    state1 [3]uint32</span></span>
+<span class="line"><span>}</span></span></code></pre></div><p>其中 noCopy 是 golang 源码中检测禁止拷贝的技术。如果程序中有 WaitGroup 的赋值行为，使用 go vet 检查程序时，就会发现有报错。但需要注意的是，noCopy 不会影响程序正常的编译和运行。</p><p>state1 主要是存储着状态和信号量，状态维护了 2 个计数器，一个是请求计数器 counter，另外一个是等待计数器 waiter（已调用 WaitGroup.Wait 的 goroutine 的个数）</p><p>当数组的首地址是处于一个 8 字节对齐的位置上时，那么就将这个数组的前 8 个字节作为 64 位值使用表示状态，后 4 个字节作为 32 位值表示信号量(semaphore)；同理如果首地址没有处于 8 字节对齐的位置上时，那么就将前 4 个字节作为 semaphore，后 8 个字节作为 64 位数值。</p><p><img src="https://cdn.jsdelivr.net/gh/caijinlin/imgcdn/image-20220522104433409.png#id=YPyEi&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;title=" alt=""></p><h1 id="三、使用方法" tabindex="-1">三、使用方法 <a class="header-anchor" href="#三、使用方法" aria-label="Permalink to &quot;三、使用方法&quot;">​</a></h1><p>在 WaitGroup 里主要有 3 个方法：</p><p>WaitGroup.Add()：可以添加或减少请求的 goroutine 数量，Add(n) 将会导致 counter += n</p><p>WaitGroup.Done()：相当于 Add(-1)，Done() 将导致 counter -=1，请求计数器 counter 为 0 时通过信号量调用 runtime_Semrelease 唤醒 waiter 线程</p><p>WaitGroup.Wait()：会将 waiter++，同时通过信号量调用 runtime_Semacquire(semap) 阻塞当前 goroutine</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>func main() {</span></span>
+<span class="line"><span>    var wg sync.WaitGroup</span></span>
+<span class="line"><span>    for i := 1; i &lt;= 5; i++ {</span></span>
+<span class="line"><span>        wg.Add(1)</span></span>
+<span class="line"><span>        go func() {</span></span>
+<span class="line"><span>        defer wg.Done()</span></span>
+<span class="line"><span>        println(&quot;hello&quot;)</span></span>
+<span class="line"><span>        }()</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>​</span></span>
+<span class="line"><span>    wg.Wait()</span></span>
+<span class="line"><span>}</span></span></code></pre></div>`,14),o=[t];function i(l,r,c,d,u,h){return s(),n("div",null,o)}const g=a(e,[["render",i]]);export{m as __pageData,g as default};

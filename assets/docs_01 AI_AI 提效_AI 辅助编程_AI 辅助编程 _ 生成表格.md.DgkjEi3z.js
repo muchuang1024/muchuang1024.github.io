@@ -1,0 +1,9 @@
+import{_ as a,c as s,o as n,a4 as p}from"./chunks/framework.4aTu-Nia.js";const I=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/01 AI/AI 提效/AI 辅助编程/AI 辅助编程 | 生成表格.md","filePath":"docs/01 AI/AI 提效/AI 辅助编程/AI 辅助编程 | 生成表格.md"}'),e={name:"docs/01 AI/AI 提效/AI 辅助编程/AI 辅助编程 | 生成表格.md"},t=p(`<p>将对比类文字通过表格来展现是非常合适的，因为表格能清晰地表示两个概念在不同特性上的差异，下面具体演示一个使用 AI 辅助生成表格</p><p>1、使用 AI 生成表格</p><p>提示词：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>## 请使用表格，表达他们的区别</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>共享内存</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>抽象层级：抽象层级低，当我们遇到对资源进行更细粒度的控制或者对性能有极高要求的场景才应该考虑抽象层级更低的方法 耦合：高，线程需要在读取或者写入数据时先获取保护该资源的互斥锁 线程竞争：需要加锁，才能避免线程竞争和数据冲突</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>发送消息</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>抽象层级：抽象层级高，提供了更良好的封装和与领域更相关和契合的设计，比如 Go 语言中的 Channel 就提供了 Goroutine 之间用于传递信息的方式，它在内部实现时就广泛用到了共享内存和锁，通过对两者进行的组合提供了更高级的同步机制 耦合：低，生产消费者模型 线程竞争：保证同一时间只有一个活跃的线程能够访问数据，channel 维护所有被该 chanel 阻塞的协程，保证有资源的时候只唤醒一个协程，从而避免竞争</span></span></code></pre></div><h2 id="go-语言中实现了两种并发模型-一种是共享内存并发模型-另一种则是-csp-模型。" tabindex="-1">Go 语言中实现了两种并发模型，一种是共享内存并发模型，另一种则是 CSP 模型。 <a class="header-anchor" href="#go-语言中实现了两种并发模型-一种是共享内存并发模型-另一种则是-csp-模型。" aria-label="Permalink to &quot;Go 语言中实现了两种并发模型，一种是共享内存并发模型，另一种则是 CSP 模型。&quot;">​</a></h2><p>AI 回复：</p><p>下面是一个表格，对比了共享内存和发送消息（如 Go 语言中的 CSP 模型）两种并发模型的不同属性：</p><p>这个表格简要地说明了两种并发模型在抽象层级、耦合度以及线程竞争处理上的主要区别。在 Go 语言中，CSP 模型通过 channel 来实现线程间的通信，而共享内存模型则需要显式地使用互斥锁来控制对共享资源的访问。</p>`,8),c=[t];function o(l,_,i,r,d,h){return n(),s("div",null,c)}const u=a(e,[["render",o]]);export{I as __pageData,u as default};
