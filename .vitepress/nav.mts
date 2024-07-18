@@ -34,7 +34,7 @@ export default [
   { text: '供应链技术', link: 'docs/02 技术/供应链技术/调度算法.md' },
   { text: '算法', link: 'docs/02 技术/算法/刷题方法.md' },
   { text: 'Golang', link: 'docs/02 技术/Golang/大纲.md' },
-  { text: '效率提升', link: 'docs/02 技术/效率工具/常用工具.md' },
+  { text: '效率提升', link: 'docs/02 技术/效率工具/常用工具.md' }
 
-  { text: '我的产品', link: 'docs/03 产品/木川/小册.md' }
+  // { text: '我的产品', link: 'docs/03 产品/木川/小册.md' }
 ]
