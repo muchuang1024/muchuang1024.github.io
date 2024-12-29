@@ -425,4 +425,4 @@ import{_ as n,c as A,o as s,a4 as a}from"./chunks/framework.4aTu-Nia.js";const g
 <span class="line"><span>	bestSolutionType = alg.SOLUTION_TYPE_DDX</span></span>
 <span class="line"><span>	bestSolution = solutions2[0]</span></span>
 <span class="line"><span>	return</span></span>
-<span class="line"><span>}</span></span></code></pre></div>`,177),i=[p];function e(l,o,m,E,r,C){return s(),A("div",null,i)}const J=n(t,[["render",e]]);export{g as __pageData,J as default};
+<span class="line"><span>}</span></span></code></pre></div><h2 id="七、算法局限性" tabindex="-1">七、算法局限性 <a class="header-anchor" href="#七、算法局限性" aria-label="Permalink to &quot;七、算法局限性&quot;">​</a></h2><p>1、当前的 VRP 问题求解能力无法保障全局最优，在小规模算例上与最优解的 Gap 约30-50%；</p><p>2、较大规模 VRP问题收敛速度慢，需要在求解速度与求解的最优性之间 trade-off。</p>`,180),i=[p];function e(l,o,m,r,E,C){return s(),A("div",null,i)}const J=n(t,[["render",e]]);export{g as __pageData,J as default};
