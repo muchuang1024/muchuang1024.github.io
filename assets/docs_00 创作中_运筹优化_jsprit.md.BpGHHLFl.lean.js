@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as s}from"./chunks/framework.4aTu-Nia.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/00 创作中/运筹优化/jsprit.md","filePath":"docs/00 创作中/运筹优化/jsprit.md"}'),r={name:"docs/00 创作中/运筹优化/jsprit.md"};function a(o,c,n,p,i,d){return s(),e("div")}const f=t(r,[["render",a]]);export{m as __pageData,f as default};
