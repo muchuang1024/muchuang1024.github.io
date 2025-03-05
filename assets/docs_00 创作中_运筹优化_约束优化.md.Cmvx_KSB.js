@@ -1,0 +1,28 @@
+import{_ as s,c as a,o as n,a4 as o}from"./chunks/framework.4aTu-Nia.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/00 创作中/运筹优化/约束优化.md","filePath":"docs/00 创作中/运筹优化/约束优化.md"}'),e={name:"docs/00 创作中/运筹优化/约束优化.md"},l=o(`<h2 id="一、介绍" tabindex="-1">一、介绍 <a class="header-anchor" href="#一、介绍" aria-label="Permalink to &quot;一、介绍&quot;">​</a></h2><p>约束优化（<strong>Constraint optimization</strong>）也称为 （<strong>Constraint Programming</strong>） (CP)，CP 基于可行性（找到可行的解决方案） 而不是优化 （找到最佳解决方案），并且侧重于约束和变量，而不是目标函数。事实上，CP 问题甚至可能没有目标函数 — 目标可能是通过向问题添加约束，将一大组可能的解决方案缩小到更易于管理的子集。</p><p>CP-SAT solver 本身<strong>不支持实数变量</strong>。它主要设计用于解决那些涉及整数和布尔变量的约束问题。如果你需要解决涉及实数变量的优化问题，你可能需要使用 OR-Tools 中的其他求解器，如线性求解器（<code>ortools.linear_solver</code>），它支持实数变量。</p><h2 id="二、tools-工具" tabindex="-1">二、Tools 工具 <a class="header-anchor" href="#二、tools-工具" aria-label="Permalink to &quot;二、Tools 工具&quot;">​</a></h2><p>Google 提供了几种解决 CP 问题的方法：</p><p><a href="https://developers.google.com/optimization/cp/cp_solver" target="_blank" rel="noreferrer">CP-SAT 求解器</a>：<strong>约束规划</strong> 使用 SAT（satisfiability）满足性方法的求解器。</p><p><a href="https://developers.google.com/optimization/routing/original_cp_solver" target="_blank" rel="noreferrer">原始 CP 求解器</a>：A Routing Library 中使用的 <strong>Constraint Programming</strong> 解算器</p><h2 id="三、cp-sat-solver" tabindex="-1">三、CP-SAT Solver <a class="header-anchor" href="#三、cp-sat-solver" aria-label="Permalink to &quot;三、CP-SAT Solver&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>from ortools.sat.python import cp_model</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def simple_sat_program():</span></span>
+<span class="line"><span>    &quot;&quot;&quot;Minimal CP-SAT example to showcase calling the solver.&quot;&quot;&quot;</span></span>
+<span class="line"><span>    # Creates the model.</span></span>
+<span class="line"><span>    model = cp_model.CpModel()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # Creates the variables.</span></span>
+<span class="line"><span>    num_vals = 3</span></span>
+<span class="line"><span>    x = model.new_int_var(0, num_vals - 1, &quot;x&quot;)</span></span>
+<span class="line"><span>    y = model.new_int_var(0, num_vals - 1, &quot;y&quot;)</span></span>
+<span class="line"><span>    z = model.new_int_var(0, num_vals - 1, &quot;z&quot;)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # Creates the constraints.</span></span>
+<span class="line"><span>    model.add(x != y)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # Creates a solver and solves the model.</span></span>
+<span class="line"><span>    solver = cp_model.CpSolver()</span></span>
+<span class="line"><span>    status = solver.solve(model)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    if status == cp_model.OPTIMAL or status == cp_model.FEASIBLE:</span></span>
+<span class="line"><span>        print(f&quot;x = {solver.value(x)}&quot;)</span></span>
+<span class="line"><span>        print(f&quot;y = {solver.value(y)}&quot;)</span></span>
+<span class="line"><span>        print(f&quot;z = {solver.value(z)}&quot;)</span></span>
+<span class="line"><span>    else:</span></span>
+<span class="line"><span>        print(&quot;No solution found.&quot;)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>simple_sat_program()</span></span></code></pre></div><h2 id="四、求解结果" tabindex="-1">四、求解结果 <a class="header-anchor" href="#四、求解结果" aria-label="Permalink to &quot;四、求解结果&quot;">​</a></h2><h3 id="_1-status-optimal" tabindex="-1">1. <strong><code>status: OPTIMAL</code></strong> <a class="header-anchor" href="#_1-status-optimal" aria-label="Permalink to &quot;1. **\`status: OPTIMAL\`**&quot;">​</a></h3><ul><li><p><strong>含义</strong>：求解器找到了一个最优解，并且确认没有更好的解存在。</p></li><li><p><strong>解释</strong>：在你的问题中，求解器找到了一个满足所有约束条件的解，并且确认这个解是最优的。这通常意味着你的问题是一个可行问题，并且求解器能够找到一个全局最优解。</p></li></ul><h3 id="_2-conflicts-20" tabindex="-1">2. <strong><code>conflicts: 20</code></strong> <a class="header-anchor" href="#_2-conflicts-20" aria-label="Permalink to &quot;2. **\`conflicts: 20\`**&quot;">​</a></h3><ul><li><p><strong>含义</strong>：求解过程中发生冲突，冲突指求解器尝试赋值变量时发现违反约束的情况，需回溯到上一个决策点。</p></li><li><p><strong>解释</strong>：冲突数表示在求解过程中遇到的矛盾次数。每次冲突都意味着求解器需要回溯并尝试其他可能的解路径。因此，冲突数越小，求解器需要回溯的次数就越少，从而减少计算耗时。</p></li></ul><h3 id="_3-branches-1998" tabindex="-1">3. <strong><code>branches: 1998</code></strong> <a class="header-anchor" href="#_3-branches-1998" aria-label="Permalink to &quot;3. **\`branches: 1998\`**&quot;">​</a></h3><ul><li><p><strong>含义</strong>：求解过程中进行了 1998 次分支操作。分支是求解器在搜索树中对变量赋值的决策次数（如尝试给变量<code>x</code>赋值0或1）。</p></li><li><p><strong>解释</strong>：分支数表示求解器在搜索过程中进行的分叉次数。每次分支都会增加求解器需要探索的解路径数量。因此，分支数越小，求解器需要探索的解路径就越少，从而减少计算耗时。</p></li></ul><h3 id="_4-wall-time-162-337722074-s" tabindex="-1">4. <strong><code>wall time: 162.337722074 s</code></strong> <a class="header-anchor" href="#_4-wall-time-162-337722074-s" aria-label="Permalink to &quot;4. **\`wall time: 162.337722074 s\`**&quot;">​</a></h3><ul><li><p><strong>含义</strong>：求解器运行的总时间。</p></li><li><p><strong>解释</strong>：这是求解器从开始到结束所花费的总时间，单位是秒。在这个例子中，求解器用了大约 162.34 秒才找到最优解。这表明求解器的运行时间较长，可能是因为问题的复杂性较高，或者求解器需要进行大量的分支操作来找到最优解。</p></li></ul><p>冲突处理需要时间，但有效的冲突学习可以剪枝搜索空间，减少后续分支。因此，冲突数高不一定导致时间更长，如果冲突处理效率高导致分支数变少，可能反而加速求解。</p>`,19),t=[l];function p(r,i,c,d,u,h){return n(),a("div",null,t)}const g=s(e,[["render",p]]);export{m as __pageData,g as default};
