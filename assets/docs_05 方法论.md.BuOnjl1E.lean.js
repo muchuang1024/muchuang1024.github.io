@@ -1,0 +1,1 @@
+import{_ as a,c as t,o as e,a4 as c}from"./chunks/framework.4aTu-Nia.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/05 方法论.md","filePath":"docs/05 方法论.md"}'),r={name:"docs/05 方法论.md"},o=c("",8),n=[o];function h(s,p,_,i,l,d){return e(),t("div",null,n)}const u=a(r,[["render",h]]);export{f as __pageData,u as default};
