@@ -1,0 +1,5 @@
+import{_ as o,c as i,m as t,a,t as l,o as r}from"./chunks/framework.4aTu-Nia.js";const _=JSON.parse('{"title":"","description":"Select a title, an outline will be generated for You.","frontmatter":{"promptId":"getOutline","name":"🗒️Generate Outline","description":"Select a title, an outline will be generated for You.","required_values":"title","author":"Noureddine","tags":"writing","version":"0.0.1"},"headers":[],"relativePath":"docs/textgenerator/templates/default/getOutline.md","filePath":"docs/textgenerator/templates/default/getOutline.md"}'),n={name:"docs/textgenerator/templates/default/getOutline.md"},s={id:"title-title-prompt-write-an-outline-for-a-blog-for-this-title-outline",tabindex:"-1"},d=t("a",{class:"header-anchor",href:"#title-title-prompt-write-an-outline-for-a-blog-for-this-title-outline","aria-label":`Permalink to "title:
+{{title}}
+prompt:
+write an outline for a blog for this title.
+outline:"`},"​",-1);function u(e,c,p,f,m,g){return r(),i("div",null,[t("h2",s,[a("title: "+l(e.title)+" prompt: write an outline for a blog for this title. outline: ",1),d])])}const b=o(n,[["render",u]]);export{_ as __pageData,b as default};
