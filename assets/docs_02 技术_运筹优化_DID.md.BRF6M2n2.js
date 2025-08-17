@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./chunks/framework.4aTu-Nia.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/02 技术/运筹优化/DID.md","filePath":"docs/02 技术/运筹优化/DID.md"}'),o={name:"docs/02 技术/运筹优化/DID.md"};function s(c,r,n,d,p,_){return a(),t("div")}const D=e(o,[["render",s]]);export{m as __pageData,D as default};
