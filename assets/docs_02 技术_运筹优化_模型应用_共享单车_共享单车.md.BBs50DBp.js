@@ -1,0 +1,10 @@
+import{_ as t,c as d,o as r,a4 as e}from"./chunks/framework.4aTu-Nia.js";const b=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/02 技术/运筹优化/模型应用/共享单车/共享单车.md","filePath":"docs/02 技术/运筹优化/模型应用/共享单车/共享单车.md"}'),n={name:"docs/02 技术/运筹优化/模型应用/共享单车/共享单车.md"},o=e(`<p>需求不确定性：</p><p>1、点位装多少、卸多少辆车，需求是预测的</p><p>未配对取送货：</p><p>1、只知道装点和卸点集合，不知道装点和卸点匹配情况</p><p>容量约束【0， Q】：</p><p>1、不能保证先取后送</p><p>Multi Trip：</p><p><strong>Depot 载重重置</strong></p><p>美团配送对实时性要求极高，是秒级的即时调度问题，但对最优性的要求不高/弱于物流场景</p><p>调度问题被分解为骑手路径优化和订单分配方案的优化。骑手路径优化问题要解决的是在新订单分配至骑手后，确定骑手的最佳配送线路；而订单分配优化是把一批订单分配至相应的骑手，使得我们关注的指标最优。两者的关系是：订单分配优化算法进行初始的订单分配，然后路径优化算法获取各骑手的最佳行驶路线，订单分配优化算法根据骑手路径优化结果调整分配方案，这两个层次不断反复迭代。</p><p><img src="https://muchuang-img.oss-cn-beijing.aliyuncs.com/20241229211623.png" alt=""></p><table><thead><tr><th>工业界问题</th><th>地图导航</th><th><a href="https://blog.csdn.net/c9Yv2cf9I06K2A9E/article/details/130857950" target="_blank" rel="noreferrer">司乘匹配</a></th><th>运输问题</th><th>调度问题</th></tr></thead><tbody><tr><td>问题描述</td><td>给出从单个供给点（起点）到单个需求点（终点）的最优路径</td><td>在多个<strong>供给点</strong>（司机）和多个<strong>需求点</strong>（乘客）中结合时间、体验、服务、价值等因素，进行全局司机和乘客的匹配</td><td>寻找从单个<strong>供给点</strong>（CDC/RDC）多个<strong>需求点</strong>最优车辆分配和配送顺序</td><td>寻找从多个供给点到多个需求点的装卸匹配、车辆分配、装卸顺序</td></tr><tr><td>设计优化决策</td><td>路径优化</td><td>匹配</td><td>车辆分配+路径优化</td><td>供需匹配+车辆分配+路径优化</td></tr><tr><td>数学模型</td><td>shortest path</td><td>assignment/online assignment</td><td>VRP、匈牙利算法求解（多项式时间）</td><td>PDP</td></tr></tbody></table><p>为什么不能用利用运输问题求解调度？我们可以想象在用运输问题模型求解为连线后，需要继续解决的问题</p><pre><code>- 一个冗余缺口连线如何和载具进行匹配？
+    
+- 如果连线量大于载具容量，如何拆分？
+    
+- 如果连线量小于载具容量，如何合并？
+    
+- 多个任务如何指派给同一个T0？
+    
+- 有没有可能连线无法被履约（连线过远，没有足够的载具可以履约）？
+</code></pre><p>可以看到后续问题本身就是一个典型的pickiup and delivery（PDP） 问题，只不过先解决运输问题，缩小了PDP的搜索范围，反倒使得按这个流程无法取得最优解</p><table><thead><tr><th></th></tr></thead><tbody><tr><td>$x_{ij}$: 专员k从i点到j点；<br> <br>$p_{ki}$ : 专员 k 在冗余点 i 装车数量；<br> <br>$d_{kj}$ : 专员 k 在缺口点 j 卸车数量；</td></tr><tr><td></td></tr></tbody></table>`,16),p=[o];function s(a,_,c,i,h,l){return r(),d("div",null,p)}const m=t(n,[["render",s]]);export{b as __pageData,m as default};
