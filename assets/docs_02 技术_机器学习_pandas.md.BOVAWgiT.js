@@ -1,0 +1,5 @@
+import{_ as s,c as a,o as n,a4 as e}from"./chunks/framework.4aTu-Nia.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/02 技术/机器学习/pandas.md","filePath":"docs/02 技术/机器学习/pandas.md"}'),p={name:"docs/02 技术/机器学习/pandas.md"},t=e(`<p>交叉特征：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span># 计算每个课程的平均学习时长</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>df_train_origin.groupby([&#39;course&#39;, &#39;study_hours_bin&#39;])[&#39;exam_score&#39;].mean()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>df_train_origin.groupby([&#39;exam_difficulty&#39;, &#39;study_hours_bin&#39;])[&#39;exam_score&#39;].mean()</span></span></code></pre></div><p>Df_train_origin.Groupby ([&#39;course&#39;, &#39;study_hours_bin&#39;])[&#39;exam_score&#39;]. Mean ()</p>`,3),o=[t];function i(_,c,r,d,l,u){return n(),a("div",null,o)}const f=s(p,[["render",i]]);export{h as __pageData,f as default};
